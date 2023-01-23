@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+.container {
+  max-width: var(--container-width, 1200px);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+  
+  @include mq('tablet-wide') {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.section-padding {
+  padding-block: var(--padding, 5rem); // might be 3rem
+}
