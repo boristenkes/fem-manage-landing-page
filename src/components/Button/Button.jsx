@@ -6,10 +6,12 @@ const Button = styled.a`
   font-size: .9rem;
   font-family: var(--ff-button);
   font-weight: var(--fw-semibold);
-  padding: .75rem 2rem;
+  padding: 1rem 2.5rem;
   border-radius: 100vw;
   box-shadow: 0px 12px 13px -10px var(--clr-primary-400);
   transition: transform 100ms ease-in-out;
+  display: block;
+  width: fit-content;
 
   &:hover {
     background-color: var(--clr-primary-200);

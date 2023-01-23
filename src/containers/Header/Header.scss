@@ -1,0 +1,30 @@
+@use '../../scss/abstracts/' as *;
+
+.primary-header {
+  align-items: center;
+
+  &-content {
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    @include mq('tablet-wide', max) {
+      order: 1;
+    }
+    a {
+      @include mq('tablet-wide', max) {
+        margin-inline: auto;
+      }
+    }
+  }
+
+  &-image {
+    position: relative;
+
+    &-pattern {
+      position: absolute;
+      top: -350px;
+      right: -50px;
+      z-index: -1;
+    }
+  }
+}

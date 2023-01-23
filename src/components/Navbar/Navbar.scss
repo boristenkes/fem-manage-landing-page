@@ -29,6 +29,7 @@
     border-radius: 5px;
     box-shadow: 0 0 0 999em transparent;
     transition: transform, box-shadow, 500ms ease-in-out;
+    z-index: 100;
 
     &.active {
       transform: translateX(-50%);

@@ -1,0 +1,29 @@
+@use '../abstracts/' as *;
+
+.head-text {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-bold);
+  font-size: 4rem;
+  color: var(--clr-accent-400);
+  line-height: 1.1;
+
+  @include mq('tablet-wide', max) {
+    text-align: center;
+    margin-inline: auto;
+    font-size: 3rem;
+  }
+}
+
+.body-text {
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-body);
+  font-size: 1.1rem;
+  color: var(--clr-neutral-400);
+  max-width: var(--width, 380px);
+
+  @include mq('tablet-wide', max) {
+    text-align: center;
+    margin-inline: auto;
+    font-size: 1.25rem;
+  }
+}
