@@ -32,7 +32,7 @@ export const icons = {
     youtube: iconYoutube,
 };
 
-export default {
+export {
     BgSimplifySectionDesktop,
     BgSimplifySectionMobile,
     BgTabletPattern,
