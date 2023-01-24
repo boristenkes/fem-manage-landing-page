@@ -22,7 +22,7 @@ const Header = () => {
 
       <div className='primary-header-image'>
         <IllustrationIntro />
-        <BgTabletPattern className='primary-header-image-pattern' />
+        <BgTabletPattern style={{overflow: 'visible'}} className='primary-header-image-pattern' />
       </div>
     </header>
   )

@@ -1,0 +1,64 @@
+@use '../../scss/abstracts/' as *;
+
+.about {
+  @include separate-children(3rem);
+
+  &-title {
+    font-size: 2.5rem;
+  }
+  &-content {
+    @include separate-children(2rem);
+  }
+  &-pattern {
+    overflow: visible;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    transform: 
+      rotate(180deg)
+      translateX(60%);
+  }
+  &-features {
+    
+    ul {
+      @include separate-children(2.5rem);
+    }
+    &-title {
+      font-weight: var(--fw-bold);
+      font-family: var(--ff-heading);
+      color: var(--clr-accent-400);
+      white-space: nowrap;
+  
+
+      &::before {
+        content: attr(data-count);
+        color: var(--clr-neutral-100);
+        background: var(--clr-primary-400);
+        padding: .5rem 1.5rem;
+        border-radius: 100vw;
+        margin-right: 1.5rem;
+        font-weight: var(--fw-semibold);
+      }
+
+      @include mq('tablet-wide', max) {
+        background: var(--clr-primary-100);
+        padding-block: .34rem;
+        border-radius: 100vw;
+
+        box-shadow: 300px 0px 0px 0px var(--clr-primary-100);
+      }
+    }
+    &-description {
+      margin-left: 93px;
+      font-size: 1rem;
+      margin-top: 1rem;
+      --width: 449px;
+
+      @include mq('tablet-wide', max) {
+        margin-inline: 0;
+        text-align: left;
+        line-height: 2;
+      }
+    }
+  }
+}

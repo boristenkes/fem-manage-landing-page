@@ -4,9 +4,7 @@
   align-items: center;
 
   &-content {
-    & > *:not(:last-child) {
-      margin-bottom: 2rem;
-    }
+    @include separate-children(2rem);
     @include mq('tablet-wide', max) {
       order: 1;
     }

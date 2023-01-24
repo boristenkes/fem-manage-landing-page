@@ -30,3 +30,17 @@
     flex-direction: $direction;
   }
 }
+
+@mixin separate-children($space, $direction: 'block') {
+  & > *:not(:last-child) {
+    @if $direction == 'block' {
+      margin-bottom: $space;
+    }
+    @else if $direction == 'inline' {
+      margin-right: $space;
+    }
+    @else if $direction == 'both' {
+      margin: $space;
+    }
+  }
+}

@@ -19,7 +19,7 @@
   font-family: var(--ff-body);
   font-size: 1.1rem;
   color: var(--clr-neutral-400);
-  max-width: var(--width, 380px);
+  max-width: min(90%, var(--width, 380px));
 
   @include mq('tablet-wide', max) {
     text-align: center;
