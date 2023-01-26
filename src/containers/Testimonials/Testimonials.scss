@@ -1,0 +1,43 @@
+@use '../../scss/abstracts/' as *;
+
+.testimonials {
+  @include separate-children(4rem);
+
+  &-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  &-cta {
+    margin-inline: auto;
+  }
+  &-carousel {
+    overflow: visible !important;
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    cursor: grab;
+    
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  &-slide {
+    text-align: center;
+    background-color: var(--clr-neutral-100);
+    padding-bottom: 2rem;
+
+    * {
+      margin-inline: auto;
+    }
+    img {
+      transform: translateY(-50%);
+      max-width: 100px;
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin-block: -20px 30px;
+    }
+    p {
+      --width: 510px;
+    }
+  }
+}
