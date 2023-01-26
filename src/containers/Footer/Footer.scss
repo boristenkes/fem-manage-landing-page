@@ -1,112 +1,115 @@
 @use '../../scss/abstracts/' as *;
 
 .footer {
+	&-wrapper {
+		position: relative;
+		grid-template-areas:
+			'form'
+			'links'
+			'logo-social';
 
-  &-wrapper {
-    position: relative;
-    grid-template-areas: 
-      'form'
-      'links'
-      'logo-social'
-  }
+		@include mq('tablet') {
+			grid-template-areas: 'logo-social links form';
+		}
+	}
 
-  &-logo-social {
-    grid-area: logo-social;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+	&-logo-social {
+		grid-area: logo-social;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
 
-    @include mq('phone-wide', max) {
-      flex-direction: column-reverse;
-      gap: 2rem;
-      padding-bottom: 5rem;
-      & > * {
-        margin-inline: auto;
-      }
-    }
+		@include mq('tablet', max) {
+			flex-direction: column-reverse;
+			gap: 3rem;
+			padding-bottom: 1rem;
+			& > * {
+				margin-inline: auto;
+			}
+		}
 
-    ul {
-      display: flex;
-      font-size: 1.5rem;
-      gap: .75rem;
-      @include mq('phone-wide', max) {
-        font-size: 2.5rem;
-        gap: 1.5rem;
-      }
-    }
-    a {
-      color: var(--clr-neutral-100);
-      &:hover {
-        color: var(--clr-primary-400);
-      }
-    }
-  }
+		ul {
+			display: flex;
+			font-size: 1.5rem;
+			gap: 0.75rem;
+			@include mq('tablet', max) {
+				font-size: 2.5rem;
+				gap: 2.5rem;
+			}
+		}
+		a {
+			color: var(--clr-neutral-100);
+			&:hover {
+				color: var(--clr-primary-400);
+			}
+		}
+	}
 
-  &-links {
-    grid-area: links;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+	&-links {
+		grid-area: links;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
 
-    ul {
-      display: grid;
-      gap: .75rem;
-      @include mq('phone-wide', max) {
-        padding-inline: 2rem;
-      }
-    }
-    a {
-      color: var(--clr-neutral-100);
-      font-family: var(--ff-footer-nav);
-      font-weight: var(--fw-regular);
-      &:hover {
-        color: var(--clr-primary-400);
-      }
-    }
-  }
+		ul {
+			display: grid;
+			gap: 0.75rem;
+			@include mq('tablet', max) {
+				padding: 3rem 2rem;
+			}
+		}
+		a {
+			color: var(--clr-neutral-100);
+			font-family: var(--ff-footer-nav);
+			font-weight: var(--fw-regular);
+			&:hover {
+				color: var(--clr-primary-400);
+			}
+		}
+	}
 
-  &-form {
-    grid-area: form;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    @include mq('phone-wide') {
-      align-items: flex-end;
-    }
-    
-    form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-    }
-    input {
-      font-family: var(--ff-primary);
-      font-size: .85rem;
-      padding: .75rem 1.5rem;
-      border-radius: 100vmax;
-      border: none;
-      &::placeholder {
-        color: var(--clr-neutral-400);  
-      }
-      @include mq('phone-wide', max) {
-        flex: 1;
-      }
-    }
-    a {
-      padding-inline: 2rem !important;
-      box-shadow: none;
-    }
-    p {
-      color: var(--clr-neutral-500);
-      font-family: var(--ff-primary);
-      font-size: .8rem;
-      @include mq('phone-wide', max) {
-        position: absolute;
-        bottom: 1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-  }
+	&-form {
+		grid-area: form;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		@include mq('tablet') {
+			align-items: flex-end;
+		}
+
+		form {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+		}
+		input {
+			font-family: var(--ff-primary);
+			font-size: 0.85rem;
+			padding: 0.75rem 1.5rem;
+			border-radius: 100vmax;
+			border: none;
+			&::placeholder {
+				color: var(--clr-neutral-400);
+			}
+			@include mq('tablet', max) {
+				flex: 1;
+			}
+		}
+		a {
+			padding: 0.8rem 2rem;
+			box-shadow: none;
+		}
+		p {
+			color: var(--clr-neutral-500);
+			font-family: var(--ff-primary);
+			font-size: 0.8rem;
+			@include mq('tablet', max) {
+				position: absolute;
+				bottom: 1.5rem;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
 }
