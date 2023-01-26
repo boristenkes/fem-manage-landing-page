@@ -13,7 +13,7 @@ const CTA = () => {
       <div className="cta-wrapper | container even-columns section-padding">
         {isDesktop
           ? <BgSimplifySectionDesktop className='cta-pattern' />
-          : <BgSimplifySectionMobile className='cta-pattern' />}
+          : <BgSimplifySectionMobile className='cta-pattern cta-pattern-mobile' />}
         <div>
           <h1 className='cta-text | head-text text-neutral-100' style={{fontSize: '3rem'}}>Simplify how your team works today.</h1>
         </div>

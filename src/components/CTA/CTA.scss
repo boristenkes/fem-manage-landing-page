@@ -8,6 +8,11 @@
     position: relative;
     align-items: center;
   }
+  &-text {
+    @include mq('phone-wide', max) {
+      margin-bottom: 1rem;
+    }
+  }
   &-button {
     margin-inline: auto;
     
@@ -22,5 +27,11 @@
     overflow: visible;
     top: -50%;
     left: 20%;
+
+    &-mobile {
+      top: 50%;
+      left: 0;
+      transform: translateY(-35%);
+    }
   }
 }
