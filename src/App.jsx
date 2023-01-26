@@ -5,7 +5,7 @@ import { Header, About, Testimonials, Footer } from './containers';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{overflow: 'hidden'}}>
       <Navbar />
       <Header />
       <About />

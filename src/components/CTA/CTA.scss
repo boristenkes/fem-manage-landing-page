@@ -1,0 +1,26 @@
+@use '../../scss/abstracts/' as *;
+
+.cta {
+  &-parent {
+    overflow: hidden;
+  }
+  &-wrapper {
+    position: relative;
+    align-items: center;
+  }
+  &-button {
+    margin-inline: auto;
+    
+    @include mq('tablet-wide') {
+      margin-right: 0;
+    }
+  }
+  &-pattern {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    top: -50%;
+    left: 20%;
+  }
+}
