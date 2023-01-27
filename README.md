@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- [Frontend Mentor solution](https://your-solution-url.com)
+- [Frontend Mentor solution](https://www.frontendmentor.io/solutions/manage-landing-page-using-react-and-sass-YbqVm43Vvo)
 - [Live site](https://bt-manage-landing-page.netlify.app/)
 
 ## My process
