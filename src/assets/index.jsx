@@ -6,19 +6,19 @@ import { ReactComponent as BgSimplifySectionDesktop } from './bg-simplify-sectio
 import { ReactComponent as BgSimplifySectionMobile } from './bg-simplify-section-mobile.svg';
 import { ReactComponent as BgTabletPattern } from './bg-tablet-pattern.svg';
 import { ReactComponent as Logo } from './logo.svg';
-import { ReactComponent as IllustrationIntro } from './illustration-intro.svg';
+import IllustrationIntro from './illustration-intro.svg';
 
 export const avatars = {
-    ali: avatarAli,
-    anisha: avatarAnisha,
-    richard: avatarRichard,
-    shanai: avatarShanai,
+	ali: avatarAli,
+	anisha: avatarAnisha,
+	richard: avatarRichard,
+	shanai: avatarShanai,
 };
 
 export {
-    BgSimplifySectionDesktop,
-    BgSimplifySectionMobile,
-    BgTabletPattern,
-    Logo,
-    IllustrationIntro,
-}
+	BgSimplifySectionDesktop,
+	BgSimplifySectionMobile,
+	BgTabletPattern,
+	Logo,
+	IllustrationIntro,
+};

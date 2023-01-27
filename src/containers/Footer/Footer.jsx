@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './Footer.scss';
 import { socialIcons, footerLinks } from '../../constants';
 import { Logo } from '../../assets';
 import { Button } from '../../components';
 
+const emailRegex =
+	/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 const Footer = () => {
+	const [isFormValid, setIsFormValid] = useState(true);
+	const [email, setEmail] = useState('');
+	const handleForm = e => {
+		e.preventDefault();
+		setIsFormValid(emailRegex.test(email));
+	};
+
 	return (
-		<footer className='bg-accent-600'>
+		<footer noValidate className='bg-accent-600'>
 			<div className='footer-wrapper container even-columns section-padding'>
 				<div className='footer-logo-social'>
 					<Logo style={{ '--clr-logo': 'var(--clr-primary-100)' }} />
@@ -36,9 +46,19 @@ const Footer = () => {
 				</div>
 
 				<div className='footer-form'>
-					<form>
-						<input type='email' placeholder='Updates in your inbox…' />
-						<Button href='#'>Go</Button>
+					<form onSubmit={handleForm}>
+						<div>
+							<input
+								placeholder='Updates in your inbox…'
+								onChange={e => setEmail(e.target.value)}
+								data-error={!isFormValid}
+								autoComplete='off'
+							/>
+							<Button href='#'>Go</Button>
+						</div>
+						{!isFormValid && (
+							<p className='footer-form-error'>Please insert a valid email</p>
+						)}
 					</form>
 					<p>Copyright {new Date().getFullYear()}. All Rights Reserved</p>
 				</div>

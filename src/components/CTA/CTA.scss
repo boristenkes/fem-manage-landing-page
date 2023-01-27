@@ -1,37 +1,37 @@
 @use '../../scss/abstracts/' as *;
 
 .cta {
-  &-parent {
-    overflow: hidden;
-  }
-  &-wrapper {
-    position: relative;
-    align-items: center;
-  }
-  &-text {
-    @include mq('phone-wide', max) {
-      margin-bottom: 1rem;
-    }
-  }
-  &-button {
-    margin-inline: auto;
-    
-    @include mq('tablet-wide') {
-      margin-right: 0;
-    }
-  }
-  &-pattern {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    overflow: visible;
-    top: -50%;
-    left: 20%;
+	&-parent {
+		overflow: hidden;
+	}
+	&-wrapper {
+		position: relative;
+		align-items: center;
+	}
+	&-text {
+		@include mq('phone-wide', max) {
+			margin-bottom: 1rem;
+		}
+	}
+	&-button {
+		margin-inline: auto;
 
-    &-mobile {
-      top: 50%;
-      left: 0;
-      transform: translateY(-35%);
-    }
-  }
+		@include mq('tablet-wide') {
+			margin-right: 0;
+		}
+	}
+	&-pattern {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		overflow: visible;
+		top: -50%;
+		left: 20%;
+
+		&-mobile {
+			top: 50%;
+			left: 0;
+			transform: translateY(-35%);
+		}
+	}
 }

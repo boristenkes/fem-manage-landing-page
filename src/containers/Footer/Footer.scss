@@ -77,7 +77,13 @@
 			align-items: flex-end;
 		}
 
-		form {
+		&-error {
+			color: var(--clr-primary-600) !important;
+			font-style: italic;
+			display: block;
+		}
+
+		form div {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -94,6 +100,9 @@
 			}
 			@include mq('tablet', max) {
 				flex: 1;
+			}
+			&[data-error='true'] {
+				outline: 2px solid var(--clr-primary-500);
 			}
 		}
 		a {
